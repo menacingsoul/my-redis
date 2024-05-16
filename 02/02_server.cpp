@@ -33,7 +33,9 @@ static int32_t read_full(SOCKET fd, char *buf, size_t n) {
     return 0;
 }
 
-static int32_t write_all(SOCKET fd, const char *buf, size_t n) {
+static int32_t write_all(SOCKET fd ,const char *buf, size_t n)
+{
+
     while (n > 0) {
         int rv = send(fd, buf, n, 0);
         if (rv <= 0) {
